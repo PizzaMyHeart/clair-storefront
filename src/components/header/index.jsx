@@ -91,46 +91,50 @@ const Header = () => {
         <MobileMenu open={open} setOpen={setOpen} />
         <nav
           aria-label="Top"
-          className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium flex items-center justify-between"
+          className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium"
         >
-          <div className="flex items-center">
-            <div className="h-16 flex items-center">
-              <button
-                type="button"
-                className="bg-white p-2 lg:hidden"
-                onClick={() => setOpen(true)}
-              >
-                <span className="sr-only">Open menu</span>
-                <svg
-                  className="w-4 h-4 black"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-              </button>
-
-              <div className="ml-4 flex lg:ml-0 lg:mr-8">
-                <Link to="/">
-                  <img className="h-8 w-auto" src={Logo} alt="" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex lg:items-center">
-              <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
-                <HeaderLink to="/products" text="Products" />
-                <HeaderLink to="/collections" text="Collections" />
-              </div>
-            </div>
+          {/* Clair logo */}
+          <div className="flex justify-center w-full">
+            <Link to="/">
+              <img className="h-72 w-auto" src={Logo} alt="" />
+            </Link>
           </div>
+          <div className="flex justify-between">
+            <div className="flex items-center">
+              <div className="h-16 flex items-center">
+                <button
+                  type="button"
+                  className="bg-white p-2 lg:hidden"
+                  onClick={() => setOpen(true)}
+                >
+                  <span className="sr-only">Open menu</span>
+                  <svg
+                    className="w-4 h-4 black"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                  </svg>
+                </button>
 
-          <div className="flex items-center justify-end">
-            <div className="hidden lg:flex">
-              <RegionPopover regions={mockData.regions} />
-              <AccountPopover customer={mockData.customer} />
+
+              </div>
+
+              <div className="hidden lg:flex lg:items-center">
+                <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
+                  <HeaderLink to="/products" text="Products" />
+                  <HeaderLink to="/collections" text="Collections" />
+                </div>
+              </div>
             </div>
-            <CartPopover cart={mockData.cart} />
+
+            <div className="flex items-center justify-end">
+              <div className="hidden lg:flex">
+                <RegionPopover regions={mockData.regions} />
+                <AccountPopover customer={mockData.customer} />
+              </div>
+              <CartPopover cart={mockData.cart} />
+            </div>
           </div>
         </nav>
       </header>
