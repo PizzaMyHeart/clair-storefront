@@ -117,14 +117,16 @@ const Header = () => {
           aria-label="Top"
           className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium"
         >
+          
           {/* Clair logo */}
-          <div className="flex justify-center w-full">
+          {/*<div className="flex justify-center w-full">
             <Link to="/">
               <img className="h-16 w-auto m-4" src={Logo} alt="" />
             </Link>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex items-center">
+          </div>*/}
+        
+          <div className="flex flex-row">
+            <div className="flex basis-1/3 justify-center">
               <div className="h-16 flex items-center">
                 <button
                   type="button"
@@ -152,12 +154,18 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-end">
+            <div className="flex basis-1/3 justify-center w-full">
+              <Link to="/">
+                <img className="h-16 w-auto m-4" src={Logo} alt="" />
+              </Link>
+            </div>
+
+            <div className="flex basis-1/3 items-center justify-center">
               <div className="hidden lg:flex">
-                <RegionPopover regions={mockData.regions} />
+                <RegionPopover regions={mockData.regions}/>
                 <AccountPopover customer={mockData.customer} />
               </div>
-              <CartPopover cart={mockData.cart} />
+              <CartPopover cart={mockData.cart}/>
             </div>
           </div>
         </nav>
