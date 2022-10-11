@@ -107,7 +107,7 @@ const Header = () => {
         window.removeEventListener('scroll', controlHeader)
 ;      }
     }
-  }, [lastScrollY])
+  }, [controlHeader])
 
   return (
     <div className="sticky top-0 z-20">
@@ -122,7 +122,7 @@ const Header = () => {
             {/* Clair logo */}
             <div className="flex justify-center w-full">
               <Link to="/">
-                <img className="h-72 w-auto" src={Logo} alt="" />
+                <img className="h-16 w-auto m-4" src={Logo} alt="" />
               </Link>
             </div>
             <div className="flex justify-between">
