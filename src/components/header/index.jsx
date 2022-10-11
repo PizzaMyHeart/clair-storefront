@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Logo from "../../icons/logo.svg"
 import AccountPopover from "./account-popover"
 import Banner from "./banner"
@@ -83,61 +83,88 @@ const mockData = {
 }
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false); // mobile view (hamburger icon)
+  // show navbar on scroll up, hide on scroll down
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
+  const controlHeader = () => {
+    if (typeof window !== 'undefined') {
+      console.log(window.scrollY)
+      if (window.scrollY > lastScrollY) {
+        setShow(false);
+      } else {
+        setShow(true)
+      }
+      setLastScrollY(window.scrollY)
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlHeader);
+      return () => {
+        window.removeEventListener('scroll', controlHeader)
+;      }
+    }
+  }, [lastScrollY])
+
   return (
     <div className="sticky top-0 z-20">
-      <header className="relative bg-white">
-        <Banner />
-        <MobileMenu open={open} setOpen={setOpen} />
-        <nav
-          aria-label="Top"
-          className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium"
-        >
-          {/* Clair logo */}
-          <div className="flex justify-center w-full">
-            <Link to="/">
-              <img className="h-72 w-auto" src={Logo} alt="" />
-            </Link>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex items-center">
-              <div className="h-16 flex items-center">
-                <button
-                  type="button"
-                  className="bg-white p-2 lg:hidden"
-                  onClick={() => setOpen(true)}
-                >
-                  <span className="sr-only">Open menu</span>
-                  <svg
-                    className="w-4 h-4 black"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+      <div className={`active ${!show && 'hidden'}`}>
+        <header className="relative bg-white">
+          <Banner />
+          <MobileMenu open={open} setOpen={setOpen} />
+          <nav
+            aria-label="Top"
+            className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium"
+          >
+            {/* Clair logo */}
+            <div className="flex justify-center w-full">
+              <Link to="/">
+                <img className="h-72 w-auto" src={Logo} alt="" />
+              </Link>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex items-center">
+                <div className="h-16 flex items-center">
+                  <button
+                    type="button"
+                    className="bg-white p-2 lg:hidden"
+                    onClick={() => setOpen(true)}
                   >
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                  </svg>
-                </button>
+                    <span className="sr-only">Open menu</span>
+                    <svg
+                      className="w-4 h-4 black"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                  </button>
 
 
-              </div>
+                </div>
 
-              <div className="hidden lg:flex lg:items-center">
-                <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
-                  <HeaderLink to="/products" text="Products" />
-                  <HeaderLink to="/collections" text="Collections" />
+                <div className="hidden lg:flex lg:items-center">
+                  <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
+                    <HeaderLink to="/products" text="Products" />
+                    <HeaderLink to="/collections" text="Collections" />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="flex items-center justify-end">
-              <div className="hidden lg:flex">
-                <RegionPopover regions={mockData.regions} />
-                <AccountPopover customer={mockData.customer} />
+              <div className="flex items-center justify-end">
+                <div className="hidden lg:flex">
+                  <RegionPopover regions={mockData.regions} />
+                  <AccountPopover customer={mockData.customer} />
+                </div>
+                <CartPopover cart={mockData.cart} />
               </div>
-              <CartPopover cart={mockData.cart} />
             </div>
-          </div>
-        </nav>
-      </header>
+          </nav>
+        </header>
+      </div>
     </div>
   )
 }
