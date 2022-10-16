@@ -126,11 +126,11 @@ const Header = () => {
           </div>*/}
         
           <div className="flex flex-row">
-            <div className="flex basis-1/3 justify-center">
+            <div className="flex basis-1/3 justify-center items-center">
               <div className="h-16 flex items-center">
                 <button
                   type="button"
-                  className="bg-white p-2 lg:hidden"
+                  className="bg-clair p-2 lg:hidden"
                   onClick={() => setOpen(true)}
                 >
                   <span className="sr-only">Open menu</span>
@@ -157,7 +157,7 @@ const Header = () => {
 
             <div className="flex basis-1/3 justify-center w-full">
               <Link to="/">
-                <img className="h-16 w-auto m-4" src={Logo} alt="" />
+                <img className="h-16 w-auto my-4" src={Logo} alt="" />
               </Link>
             </div>
 
