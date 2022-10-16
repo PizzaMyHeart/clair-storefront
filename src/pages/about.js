@@ -6,7 +6,7 @@ const AboutPage = () => {
 
   return (
     <div>
-      <SearchEngineOptimization title="Home" />
+      <SearchEngineOptimization title="About" />
       <div className="layout-base max-w-screen-md mx-auto my-12">
         <h1>About Us</h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar proin gravida hendrerit lectus. Enim ut tellus elementum sagittis vitae et leo duis. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Convallis tellus id interdum velit laoreet id donec. Sociis natoque penatibus et magnis dis parturient. Sit amet facilisis magna etiam tempor orci. Ornare aenean euismod elementum nisi quis eleifend quam. Habitant morbi tristique senectus et netus. Leo integer malesuada nunc vel risus commodo.

@@ -6,6 +6,10 @@ module.exports = {
       fontSize: {
         "2xs": "0.5rem",
       },
+      fontFamily: {
+        "header": ["Montserrat", "sans-serif"],
+        "body": ["Poppins", "sans-serif"]
+      },
       maxWidth: {
         "1/4": "25%",
         "1/2": "50%",

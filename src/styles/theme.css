@@ -1,15 +1,18 @@
 @tailwind base;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 h1 {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-semibold font-header;
 }
 
 h2 {
-  @apply text-xl font-semibold;
+  @apply text-xl font-semibold font-header;
 }
 
 h3 {
-  @apply text-lg font-semibold;
+  @apply text-lg font-semibold font-header;
 }
 
 a {
@@ -17,7 +20,7 @@ a {
 }
 
 p {
-  @apply font-light;
+  @apply font-light font-body;
 }
 
 @tailwind components;
