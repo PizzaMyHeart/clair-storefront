@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="bg-clair px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-t border-ui-medium flex items-center justify-between text-sm">
+      <div className="bg-clair px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-transparent flex items-center justify-between text-sm">
         <div className="flex items-center">
           {internals.map(internal => {
             return (

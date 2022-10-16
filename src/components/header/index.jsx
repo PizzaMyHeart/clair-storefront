@@ -115,7 +115,7 @@ const Header = () => {
         <MobileMenu open={open} setOpen={setOpen} />
         <nav
           aria-label="Top"
-          className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium"
+          className="px-4 sm:px-6 lg:px-8 border-transparent"
         >
           
           {/* Clair logo */}
