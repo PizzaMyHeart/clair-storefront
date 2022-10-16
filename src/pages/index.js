@@ -24,14 +24,12 @@ const IndexPage = ({ data }) => {
             className="w-full lg:w-1/2 h-auto"
           />
           <div>
-            <h1 className="text-4xl">CLAIM YOUR MERCH</h1>
+            <h1 className="text-4xl">Clair London</h1>
             <p className="mt-2 text-lg font-normal">
-              Contribute to Medusa and receive free merch
-              <br />
-              as a token of our appreciation
+              Ethical and affordable jewellery
             </p>
             <button className="btn-ui mt-4 min-w-full lg:min-w-0">
-              Learn more
+              Explore our range
             </button>
           </div>
         </div>
