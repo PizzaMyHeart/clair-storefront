@@ -40,7 +40,7 @@ const Footer = () => {
               <Link
                 to={internal.to}
                 key={internal.name}
-                className="mr-3 last:mr-0 text-ui-dark hover:text-gray-700"
+                className="mr-3 last:mr-0 hover:text-gray-700"
               >
                 {internal.name}
               </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
                 href={social.url}
                 key={social.name}
                 target="_blank"
-                className="mr-3 last:mr-0 text-ui-dark hover:text-gray-700 w-6"
+                className="mr-3 last:mr-0 hover:text-gray-700 w-6"
               >
                 <social.icon/>
               </a>
