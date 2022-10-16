@@ -1,15 +1,18 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FacebookIcon, InstagramIcon, TikTokIcon } from "../icons/social-icons"
 
 const Footer = () => {
   const socials = [
     {
       name: "Facebook",
       url: "https://facebook.com/clairlondonuk",
+      icon: FacebookIcon
     },
     {
       name: "Instagram",
       url: "https://instagram.com/clairlondon",
+      icon: InstagramIcon
     }
   ]
 
@@ -50,9 +53,10 @@ const Footer = () => {
               <a
                 href={social.url}
                 key={social.name}
-                className="mr-3 last:mr-0 text-ui-dark hover:text-gray-700"
+                target="_blank"
+                className="mr-3 last:mr-0 text-ui-dark hover:text-gray-700 w-6"
               >
-                {social.name}
+                <social.icon/>
               </a>
             )
           })}
