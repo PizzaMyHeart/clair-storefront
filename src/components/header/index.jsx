@@ -110,7 +110,7 @@ const Header = () => {
 
   return (
     <div className={`active ${!show && 'hidden'} sticky top-0 z-20`}>
-      <header className="relative bg-white">
+      <header className="relative bg-clair">
         <Banner />
         <MobileMenu open={open} setOpen={setOpen} />
         <nav

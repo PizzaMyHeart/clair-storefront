@@ -12,7 +12,7 @@ const CartPopover = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex items-center justify-center w-full py-2 bg-white text-sm font-medium hover:opacity-1/2">
+        <Menu.Button className="inline-flex items-center justify-center w-full py-2 text-sm font-medium hover:opacity-1/2">
           <ShoppingBagIcon />
           <span>{cart.items.reduce((sum, i) => sum + i.quantity, 0)}</span>
         </Menu.Button>
