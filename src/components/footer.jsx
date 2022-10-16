@@ -4,17 +4,13 @@ import React from "react"
 const Footer = () => {
   const socials = [
     {
-      name: "GitHub",
-      url: "https://www.github.com/medusajs",
+      name: "Facebook",
+      url: "https://facebook.com/clairlondonuk",
     },
     {
-      name: "Twitter",
-      url: "https://www.twitter.com/medusajs",
-    },
-    {
-      name: "Discord",
-      url: "https://discord.gg/ruGn9fmv9q",
-    },
+      name: "Instagram",
+      url: "https://instagram.com/clairlondon",
+    }
   ]
 
   const internals = [
