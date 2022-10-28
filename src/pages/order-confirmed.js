@@ -45,7 +45,7 @@ const OrderConfirmed = ({ location }) => {
         <span className="text-xs font-medium mb-2">THANK YOU</span>
         <h1>Order Confirmed</h1>
         <p className="text-md font-light mt-3">
-          Your order was successfully processed. You will
+          Your order #{order.display_id} was successfully processed. You will
           receive an email with the tracking number of your parcel once it’s
           avaliable.
         </p>
