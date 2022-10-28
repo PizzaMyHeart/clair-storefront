@@ -19,7 +19,7 @@ const Banner = () => {
     <div
       className={classNames(
         isHidden ? "hidden" : "",
-        "bg-ui-medium h-10 flex items-center justify-between text-sm font-medium text-blue px-4 sm:px-6 lg:px-8"
+        "bg-ui-dark h-10 flex items-center justify-between text-sm font-medium text-white px-4 sm:px-6 lg:px-8"
       )}
     >
       <p>Free shipping on all orders over £50 in the UK and worldwide | Free shipping on all orders in Malaysia</p>
