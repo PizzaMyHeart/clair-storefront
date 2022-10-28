@@ -34,9 +34,9 @@ module.exports = {
         clair: "#f8edeb",
         ui: {
           light: "#F7F7FA",
-          DEFAULT: "#EEF0F5",
+          DEFAULT: "#FFFFFF",
           medium: "#D9DFE8",
-          dark: "#89959C",
+          dark: "#000000",
         },
       },
     },
