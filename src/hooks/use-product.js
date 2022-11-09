@@ -5,7 +5,7 @@ export const useProduct = (product = { options: [], variants: [] }) => {
   const [options, setOptions] = React.useState({})
   const [quantity, setQuantity] = React.useState(1)
   const { variants } = product
-
+  const [inStock, setInStock] = React.useState(true)
   React.useEffect(() => {
     const optionObj = {}
     for (const option of product.options) {
@@ -69,11 +69,13 @@ export const useProduct = (product = { options: [], variants: [] }) => {
     variant,
     options,
     quantity,
+    inStock,
     actions: {
       updateOptions,
       increaseQuantity,
       decreaseQuantity,
       resetOptions,
+      setInStock
     },
   }
 }

@@ -1,5 +1,5 @@
 import { graphql, navigate } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import ProductExpandable from "../components/products/product-expandable"
 import ProductImages from "../components/products/product-images"
 import ProductListItem from "../components/products/product-list-item"
@@ -27,11 +27,13 @@ const Product = ({ data, pageContext }) => {
     variant,
     options,
     quantity,
+    inStock,
     actions: {
       updateOptions,
       increaseQuantity,
       decreaseQuantity,
       resetOptions,
+      setInStock
     },
   } = useProduct(product)
 
@@ -45,6 +47,24 @@ const Product = ({ data, pageContext }) => {
   }
 
   const { region } = useRegion()
+
+  
+
+  const selectedOption = Object.values(options)[0]
+  console.log(selectedOption)
+  console.log(product.variants[0])
+
+  const inventory_quantity = () => product.variants.filter(item => item.options[0].value == selectedOption)[0].inventory_quantity
+
+  useEffect(() => {
+    if (selectedOption){
+      if (inventory_quantity() > 0) {
+        setInStock(true)
+      } else {
+        setInStock(false)
+      }
+    }
+  }, [selectedOption])
 
   useEffect(() => {
     if (region && region.id !== regionId) {
@@ -68,6 +88,7 @@ const Product = ({ data, pageContext }) => {
             {formatPrice(price?.amount, currencyCode, 1)}
           </p>
           <p className="font-light">{product.description}</p>
+          
           {product.options.map((option, index) => {
             return (
               <div key={index} className="mt-6">
@@ -76,16 +97,16 @@ const Product = ({ data, pageContext }) => {
                   current={options[option.id]}
                   updateOption={updateOptions}
                 />
-              </div>
+              </div>              
             )
           })}
           <div className="inline-flex mt-4">
             <button
               className="btn-ui mr-2 px-12"
               onClick={() => handleAddToCart()}
-              disabled={loading}
+              disabled={loading || !inStock}
             >
-              Add to bag
+              {inStock ? "Add to bag" : "Sold out"}
             </button>
             <QuantitySelector
               quantity={quantity}
@@ -159,6 +180,7 @@ export const query = graphql`
           amount
           currency_code
         }
+        inventory_quantity
       }
       images {
         url
