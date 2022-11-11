@@ -22,13 +22,33 @@ const Footer = () => {
       to: "/create-return",
     },
     {
-      name: "FAQ",
+      name: "About us",
+      to: "/about-us"
+    },
+    {
+      name: "Store FAQ",
       to: "/faq",
     },
     {
-      name: "Terms & Conditions",
+      name: "Moissanite FAQ",
+      to: "/moissanite-faq"
+    },
+    {
+      name: "Sizing guide",
+      to: "/sizing-guide"
+    },
+    {
+      name: "Terms & conditions",
       to: "/terms-and-conditions",
     },
+    {
+      name: "Shipping & returns",
+      to: "/shipping-and-returns"
+    },
+    {
+      name: "Privacy policy",
+      to: "/privacy-policy"
+    }
   ]
 
   return (
