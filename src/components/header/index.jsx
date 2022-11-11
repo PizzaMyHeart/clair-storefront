@@ -150,7 +150,7 @@ const Header = () => {
                 <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
                   <HeaderLink to="/products" text="Products" />
                   <HeaderLink to="/collections" text="Collections" />
-                  <HeaderLink to="/about" text="About Us" />
+                  <HeaderLink to="/about-us" text="About Us" />
                 </div>
               </div>
             </div>
