@@ -23,6 +23,10 @@ p {
   @apply font-light font-body;
 }
 
+div {
+  @apply font-header;
+}
+
 @tailwind components;
 @tailwind utilities;
 @tailwind forms;
