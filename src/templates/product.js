@@ -49,22 +49,16 @@ const Product = ({ data, pageContext }) => {
   const { region } = useRegion()
 
   
-
-  const selectedOption = Object.values(options)[0]
-  console.log(selectedOption)
-  console.log(product.variants[0])
-
-  const inventory_quantity = () => product.variants.filter(item => item.options[0].value == selectedOption)[0].inventory_quantity
+  const inventory_quantity = variant ? variant.inventory_quantity : undefined
+  console.log(inventory_quantity)
 
   useEffect(() => {
-    if (selectedOption){
-      if (inventory_quantity() > 0) {
-        setInStock(true)
-      } else {
-        setInStock(false)
-      }
+    if (inventory_quantity > 0) {
+      setInStock(true)
+    } else {
+      setInStock(false)
     }
-  }, [selectedOption])
+  }, [inventory_quantity])
 
   useEffect(() => {
     if (region && region.id !== regionId) {
