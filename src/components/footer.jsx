@@ -18,32 +18,32 @@ const Footer = () => {
 
   const internals = [
     {
-      name: "Create return",
-      to: "/create-return",
-    },
-    {
       name: "About us",
       to: "/about-us"
+    },
+    {
+      name: "Return an order",
+      to: "/create-return",
     },
     {
       name: "Store FAQ",
       to: "/faq",
     },
     {
-      name: "Moissanite FAQ",
-      to: "/moissanite-faq"
+      name: "Shipping & returns",
+      to: "/shipping-and-returns"
     },
     {
-      name: "Sizing guide",
-      to: "/sizing-guide"
+      name: "Moissanite FAQ",
+      to: "/moissanite-faq"
     },
     {
       name: "Terms & conditions",
       to: "/terms-and-conditions",
     },
     {
-      name: "Shipping & returns",
-      to: "/shipping-and-returns"
+      name: "Sizing guide",
+      to: "/sizing-guide"
     },
     {
       name: "Privacy policy",
@@ -52,9 +52,9 @@ const Footer = () => {
   ]
 
   return (
-    <footer>
-      <div className="bg-clair px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-transparent flex items-center justify-between text-sm">
-        <div className="flex items-center">
+    <footer className="pb-4 bg-clair">
+      <div className="px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-transparent flex basis-2/3 items-center justify-between text-sm">
+        <div className="grid gap-x-16 grid-cols-2 items-center">
           {internals.map(internal => {
             return (
               <Link
@@ -82,6 +82,7 @@ const Footer = () => {
           })}
         </div>
       </div>
+      <div className="grid justify-items-center">© Clair London</div>
     </footer>
   )
 }
