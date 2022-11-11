@@ -34,7 +34,7 @@ const RegionPopover = () => {
       </div>
       
       <PopoverTransition>
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 max-h-screen px-6 py-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto focus:outline-none">
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 max-h-[60vh] px-6 py-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-y-auto focus:outline-none">
           {regions?.map(region => {
             return region.countries.map((country, i) => {
               return (
