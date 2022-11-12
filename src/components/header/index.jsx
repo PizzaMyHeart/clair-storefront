@@ -92,7 +92,7 @@ const Header = () => {
     if (typeof window !== 'undefined') {
       if (window.scrollY > lastScrollY) {
         setShow(false);
-      } else {
+      } else if (lastScrollY - window.scrollY > 20) {
         setShow(true)
       }
       setLastScrollY(window.scrollY)
