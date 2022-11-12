@@ -20,12 +20,13 @@ a {
 }
 
 p {
-  @apply font-normal font-body;
+  @apply font-medium font-body tracking-wide;
 }
 
 div {
   @apply font-header;
 }
+
 
 @tailwind components;
 @tailwind utilities;
