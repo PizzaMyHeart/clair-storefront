@@ -19,7 +19,7 @@ const CartPopover = () => {
       </div>
 
       <PopoverTransition>
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-96 max-h-[60vh] overflow-y-auto px-6 py-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 max-w-[80vw] max-h-[60vh] overflow-y-auto px-6 py-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {cart.items < 1 ? (
               <div className="flex justify-center">
