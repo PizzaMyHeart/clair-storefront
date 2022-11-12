@@ -13,6 +13,11 @@ const Footer = () => {
       name: "Instagram",
       url: "https://instagram.com/clairlondon",
       icon: InstagramIcon
+    },
+    {
+      name: "TikTok",
+      url: "https://tiktok.com/@clairlondon",
+      icon: TikTokIcon
     }
   ]
 
@@ -53,7 +58,7 @@ const Footer = () => {
 
   return (
     <footer className="pb-4 bg-clair">
-      <div className="px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-transparent flex basis-2/3 items-center justify-between text-sm">
+      <div className="px-4 pt-24 pb-4 sm:px-6 lg:px-8 border-transparent items-center justify-between text-sm grid grid-rows-2 gap-y-4 lg:grid-cols-2 lg:justify-items-center">
         <div className="grid gap-x-16 grid-cols-2 items-center">
           {internals.map(internal => {
             return (
@@ -67,6 +72,7 @@ const Footer = () => {
             )
           })}
         </div>
+        <div className="grid grid-rows-2 gap-y-4">
         <div className="flex items-center">
           {socials.map(social => {
             return (
@@ -80,6 +86,8 @@ const Footer = () => {
               </a>
             )
           })}
+          </div>
+          <div>Email us at <a href="mailto@hello@clairlondon.co.uk">hello@clairlondon.co.uk</a></div>
         </div>
       </div>
       <div className="grid justify-items-center">© Clair London</div>
