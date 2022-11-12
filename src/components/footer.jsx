@@ -32,7 +32,7 @@ const Footer = () => {
     },
     {
       name: "Store FAQ",
-      to: "/faq",
+      to: "/store-faq",
     },
     {
       name: "Shipping & returns",
