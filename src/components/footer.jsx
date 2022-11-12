@@ -90,7 +90,7 @@ const Footer = () => {
           <div>Email us at <a href="mailto@hello@clairlondon.co.uk">hello@clairlondon.co.uk</a></div>
         </div>
       </div>
-      <div className="grid justify-items-center">© Clair London</div>
+      <div className="grid justify-items-center"><a href="/">© Clair London</a></div>
     </footer>
   )
 }
