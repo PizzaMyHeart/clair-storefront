@@ -50,6 +50,7 @@ const Product = ({ data, pageContext }) => {
 
   
   const inventory_quantity = variant ? variant.inventory_quantity : undefined
+  console.log(variant)
   console.log(inventory_quantity)
 
   useEffect(() => {
