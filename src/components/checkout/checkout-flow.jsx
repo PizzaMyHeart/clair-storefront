@@ -57,24 +57,8 @@ const CheckoutFlow = () => {
 
   let steps = [
     {
-      title: "Contact",
-      key: 0,
-      completed: cart?.email !== null,
-      controller: contactForm,
-      children: <CheckoutContact controller={contactForm} />,
-      handleSubmit: contactForm.handleSubmit,
-    },
-    {
-      title: "Address",
-      key: 1,
-      completed: !_.isEmpty(cart?.shipping_address?.address_1),
-      controller: shippingAddressForm,
-      children: <CheckoutAddress controller={shippingAddressForm} />,
-      handleSubmit: shippingAddressForm.handleSubmit,
-    },
-    {
       title: "Delivery Method",
-      key: 2,
+      key: 0,
       completed: !_.isEmpty(cart?.shipping_methods),
       controller: shippingOptionController,
       children: (
@@ -85,6 +69,22 @@ const CheckoutFlow = () => {
         />
       ),
       handleSubmit: shippingOptionController.handleSubmit,
+    },
+    {
+      title: "Contact",
+      key: 1,
+      completed: cart?.email !== null,
+      controller: contactForm,
+      children: <CheckoutContact controller={contactForm} />,
+      handleSubmit: contactForm.handleSubmit,
+    },
+    {
+      title: "Address",
+      key: 2,
+      completed: !_.isEmpty(cart?.shipping_address?.address_1),
+      controller: shippingAddressForm,
+      children: <CheckoutAddress controller={shippingAddressForm} />,
+      handleSubmit: shippingAddressForm.handleSubmit,
     },
     {
       title: "Payment",
