@@ -17,7 +17,7 @@ const ProductImages = ({ images = [] }) => {
 
   return (
     <div className="flex">
-      <div className="hidden lg:block flex-col items-center mr-4 overflow-y-scroll max-h-[50rem] w-[10em]">
+      <div className="hidden lg:block flex-col items-center mr-4 overflow-y-auto max-h-[50rem] w-[10em]">
         {images.map(({ image }, index) => {
           return (
             <button

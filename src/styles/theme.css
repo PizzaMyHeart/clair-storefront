@@ -27,6 +27,13 @@ div {
   @apply font-header;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
 
 @tailwind components;
 @tailwind utilities;
