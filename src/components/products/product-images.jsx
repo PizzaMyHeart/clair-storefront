@@ -17,7 +17,7 @@ const ProductImages = ({ images = [] }) => {
 
   return (
     <div className="flex">
-      <div className="hidden lg:flex flex-col items-center mr-4">
+      <div className="hidden lg:block flex-col items-center mr-4 overflow-y-scroll max-h-[60rem] w-[8em]">
         {images.map(({ image }, index) => {
           return (
             <button
@@ -41,7 +41,8 @@ const ProductImages = ({ images = [] }) => {
           )
         })}
       </div>
-      <div className="relative h-auto w-full flex rounded-lg overflow-hidden">
+      <div className="relative h-auto w-full max-h-[60rem] flex rounded-lg overflow-hidden">
+        {/* Set max height to 60rem to prevent weirdly elongated pictures as long as the stacked thumbnails */}
         <span className="text-sm absolute right-4 top-3 z-10">{`${
           current + 1
         } / ${images?.length}`}</span>
