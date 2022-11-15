@@ -43,7 +43,7 @@ export const useShippingAddressForm = setState => {
 
       setStatus({ success: "Address info updated." })
       setSubmitting(false)
-      setState(2)
+      setState(3)
     },
   })
 

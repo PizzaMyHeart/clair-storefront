@@ -54,7 +54,7 @@ export const useShippingOptionForm = setState => {
     }
 
     setIsSubmitting(false)
-    setState(3)
+    setState(1)
   }
 
   return {

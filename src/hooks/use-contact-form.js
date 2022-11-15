@@ -33,7 +33,7 @@ export const useContactForm = setState => {
 
       setStatus({ success: "Contact info updated." })
       setSubmitting(false)
-      setState(1)
+      setState(2)
     },
   })
 
