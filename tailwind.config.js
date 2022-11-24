@@ -7,7 +7,7 @@ module.exports = {
         "2xs": "0.5rem",
       },
       fontFamily: {
-        "header": ["Montserrat", "sans-serif"],
+        "header": ["Noto Sans", "sans-serif"],
         "body": ["Poppins", "sans-serif"]
       },
       maxWidth: {

@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
           />
         <div className="absolute inset-x-1/3 bottom-16 hidden md:visible lg:grid lg:grid-rows-2">
           {/*<h1 className="text-4xl text-white">Clair London</h1>*/}
-          <p className="mt-2 text-2xl font-bold font-body text-center text-white">
+          <p className="mt-2 text-2xl font-bold font-header text-center text-white">
             Ethical and affordable jewellery
           </p>
           <button className="btn-ui mt-2 w-[8em] text-center justify-self-center" onClick={() => window.location.href = '/products'}>
