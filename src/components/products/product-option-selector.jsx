@@ -16,7 +16,7 @@ const ProductOptionSelector = ({ option, current, updateOption }) => {
                 v === current
                   ? "bg-ui-dark text-white"
                   : "bg-ui hover:bg-ui-dark hover:text-white",
-                "inline-flex items-center justify-center rounded-sm text-xs h-12 w-12 mr-2 last:mr-0 hover:bg-ui-dark hover:text-white"
+                "inline-flex items-center justify-center rounded-sm text-xs h-12 w-[10em] mr-2 last:mr-0 hover:bg-ui-dark hover:text-white"
               )}
               onClick={() => updateOption({ [option.id]: v })}
             >
