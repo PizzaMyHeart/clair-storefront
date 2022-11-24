@@ -12,7 +12,7 @@ const Expandable = ({ title, children }) => {
         <>
           <h3 className="-my-3 flow-root">
             <Disclosure.Button className="py-3 bg-white w-full flex items-center justify-between text-lg">
-              <span className="font-medium text-gray-900">{title}</span>
+              <span className="font-medium text-gray-900 text-left">{title}</span>
               <span className="ml-6 flex items-center">
                 {open ? <span>—</span> : <span>+</span>}
               </span>
