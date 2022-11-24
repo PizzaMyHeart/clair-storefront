@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
           </button>
         </div>
       </div>
-      <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
+      <div className="pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
         
         <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
 
