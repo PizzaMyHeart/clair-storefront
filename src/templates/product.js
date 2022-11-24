@@ -154,7 +154,7 @@ export const query = graphql`
       id
       title
       description
-      weight
+      # weight
       options {
         id
         title
