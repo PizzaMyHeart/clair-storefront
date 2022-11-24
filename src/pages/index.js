@@ -15,25 +15,31 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <SearchEngineOptimization title="Home" />
-      <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
-          <StaticImage
-            src="../images/hero-merch.png"
-            alt="A black Medusa hoodie and a white Medusa coffee mug"
+      <div className="relative">
+        <StaticImage
+            src="../images/hero.png"
+            alt="A ring on a wooden post"
             placeholder="tracedSVG"
-            className="w-full lg:w-1/2 h-auto"
+            className="w-full h-auto"
           />
-          <div>
-            <h1 className="text-4xl">Clair London</h1>
-            <p className="mt-2 text-lg font-normal">
-              Ethical and affordable jewellery
-            </p>
-            <button className="btn-ui mt-4 min-w-full lg:min-w-0">
-              Explore our range
-            </button>
-          </div>
+        <div className="absolute inset-x-1/3 bottom-16 hidden md:visible lg:grid lg:grid-rows-2">
+          {/*<h1 className="text-4xl text-white">Clair London</h1>*/}
+          <p className="mt-2 text-2xl font-bold text-center text-white">
+            Ethical and affordable jewellery
+          </p>
+          <button className="btn-ui mt-2 w-[8em] text-center justify-self-center" onClick={() => window.location.href = '/products'}>
+            Shop now
+          </button>
         </div>
       </div>
+      <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
+        
+        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
+
+
+        </div>
+      </div>
+      
       <div className="layout-base my-12 min-h-0">
         <Grid
           title={"Featured"}
