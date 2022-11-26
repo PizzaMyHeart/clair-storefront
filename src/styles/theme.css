@@ -27,6 +27,7 @@ div {
   @apply font-header;
 }
 
+/* purgecss start ignore*/
 .table-mdx table th, .table-mdx table td {
   text-align: left;
   padding: 1em;
@@ -48,6 +49,7 @@ div {
 .table-mdx table th:nth-of-type(3) {
   width: 20%;
 }
+/* purgecss end ignore*/
 
 * {
   scrollbar-width: thin;

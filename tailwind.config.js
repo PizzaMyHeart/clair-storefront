@@ -1,6 +1,6 @@
 module.exports = {
   future: {},
-  content: ["./src/**/*.{js,jsx,ts,tsx,vue}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx,vue,mdx}"],
   theme: {
     extend: {
       fontSize: {
