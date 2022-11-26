@@ -27,6 +27,28 @@ div {
   @apply font-header;
 }
 
+.table-mdx table th, .table-mdx table td {
+  text-align: left;
+  padding: 1em;
+  vertical-align: baseline;
+}
+
+.table-mdx table tbody tr:nth-child(odd) {
+  background-color: #f7eded;
+}
+
+.table-mdx table th:first-of-type {
+  width: 25%;
+}
+
+.table-mdx table th:nth-of-type(2) {
+  width: 30%;
+}
+
+.table-mdx table th:nth-of-type(3) {
+  width: 20%;
+}
+
 * {
   scrollbar-width: thin;
 }
