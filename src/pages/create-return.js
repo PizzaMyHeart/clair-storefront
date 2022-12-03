@@ -175,8 +175,8 @@ const CreateReturn = ({ location }) => {
                   )
                 })}
               </div>
-              <Divider />
               */}
+              <Divider />
               <div className="mt-4">
                 {returnOptions.length && (
                   <ShippingOptions
