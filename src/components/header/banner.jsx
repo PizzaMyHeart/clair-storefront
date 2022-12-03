@@ -23,7 +23,7 @@ const Banner = () => {
       )}
     >
       <p className="basis-full">Free shipping on all orders in Malaysia | Worldwide shipping available from 13 Feb 2023 | Get 10% off everything with code: CLAIRLONDON</p>
-      <button onClick={() => hideBanner()}>&times;</button>
+      {/*<button onClick={() => hideBanner()}>&times;</button>*/}
     </div>
   )
 }
