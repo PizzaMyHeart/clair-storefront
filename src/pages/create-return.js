@@ -153,6 +153,7 @@ const CreateReturn = ({ location }) => {
                   )
                 })}
               </div>
+              {/*
               <Divider />
               <div>
                 <h3>Exchanges</h3>
@@ -175,6 +176,7 @@ const CreateReturn = ({ location }) => {
                 })}
               </div>
               <Divider />
+              */}
               <div className="mt-4">
                 {returnOptions.length && (
                   <ShippingOptions
