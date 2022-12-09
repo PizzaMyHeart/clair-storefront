@@ -63,11 +63,5 @@ module.exports = {
           process.env.GATSBY_MEDUSA_BACKEND_URL || `http://localhost:9000`,
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: '861354455235735'
-      }
-    }
   ],
 }
