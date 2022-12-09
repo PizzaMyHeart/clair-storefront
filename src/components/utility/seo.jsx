@@ -61,6 +61,10 @@ function SearchEngineOptimization({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `facebook-domain-verification`,
+          content: `nd42surgowbtuerk1rima0fvycyso2`,
+        }
       ].concat(meta)}
 
     >
