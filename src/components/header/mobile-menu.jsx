@@ -9,12 +9,28 @@ import { classNames } from "../../utils/class-names"
 const MobileMenu = ({ open, setOpen }) => {
   const pages = [
     {
-      name: "Create return",
+      name: "About us",
+      path: "/about-us",
+    },
+    {
+      name: "Store FAQ",
+      path: "/store-faq",
+    },
+    {
+      name: "Moissanite FAQ",
+      path: "/moissanite-faq",
+    },
+    {
+      name: "Sizing guide",
+      path: "/sizing-guide",
+    },
+    {
+      name: "Return an order",
       path: "/create-return",
     },
     {
-      name: "FAQ",
-      path: "/faq",
+      name: "Privacy policy",
+      path: "//privacy-policy",
     },
     {
       name: "Terms & Conditions",
