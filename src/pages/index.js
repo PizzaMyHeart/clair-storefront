@@ -50,6 +50,12 @@ const IndexPage = ({ data }) => {
           })}
         </Grid>
         <div className="mt-12">
+        <StaticImage
+            src="../images/collection_header.png"
+            alt="A necklace hanging from a Christmas tree"
+            placeholder="tracedSVG"
+            className="w-full h-auto"
+          />
           <Grid
             title="Shop by collection"
             cta={{ to: "/collections", text: "Browse all collections" }}
