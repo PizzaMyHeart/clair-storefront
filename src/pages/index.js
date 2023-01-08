@@ -50,6 +50,14 @@ const IndexPage = ({ data }) => {
           })}
         </Grid>
         <div className="mt-12">
+          <StaticImage
+                src="../images/moissanite_header.png"
+                alt="A hand holding a necklace"
+                placeholder="tracedSVG"
+                className="w-full h-auto"
+              />
+        </div>
+        <div className="mt-12">
 
           <Grid
             title="Shop by collection"
