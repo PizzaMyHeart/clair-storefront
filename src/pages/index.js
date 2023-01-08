@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
               )
             })}
           </Grid>
-          <div className="mb-12">
+          <div className="mt-12 mb-12">
           <StaticImage
               src="../images/collection_header.png"
               alt="A necklace hanging from a Christmas tree"
