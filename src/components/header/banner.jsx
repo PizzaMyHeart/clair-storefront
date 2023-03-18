@@ -22,7 +22,7 @@ const Banner = () => {
         "bg-ui-dark min-h-10 py-[10px] px-[20px] flex items-center justify-between text-sm font-medium text-white px-4 sm:px-6 lg:px-8 text-center"
       )}
     >
-      <p className="basis-full">Worldwide shipping | Free shipping on all orders in Malaysia | Get 8% off using code MOTHERUK23</p>
+      <p className="basis-full">Worldwide shipping | Free shipping on all orders in Malaysia</p>
       {/*<button onClick={() => hideBanner()}>&times;</button>*/}
     </div>
   )
