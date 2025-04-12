@@ -74,8 +74,8 @@ const IndexPage = ({ data }) => {
           </Grid>
           <div className="mt-12 mb-12">
           <StaticImage
-              src="../images/hope_header.png"
-              alt="A necklace hanging from a Christmas tree"
+              src="../images/etsy_banner.jpg"
+              alt="A collage of Clair jewellery"
               placeholder="tracedSVG"
               className="w-full h-auto"
             />
